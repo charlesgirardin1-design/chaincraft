@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #faf9fd;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-chain-600 text-white font-semibold
+      px-5 py-2.5 rounded-full shadow-card transition
+      hover:bg-chain-700 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-neutral-700 font-semibold
+      px-5 py-2.5 rounded-full border border-neutral-200 shadow-card transition
+      hover:border-chain-300 hover:text-chain-700 active:scale-[0.98];
+  }
+
+  .card {
+    @apply bg-white rounded-xl2 shadow-card border border-neutral-100 transition-shadow duration-200
+      hover:shadow-cardHover;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-neutral-200 px-3.5 py-2.5 text-sm text-neutral-800
+      placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-chain-400 focus:border-chain-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium;
+  }
+
+  .badge-chain {
+    @apply bg-chain-100 text-chain-700;
+  }
+
+  .badge-spark {
+    @apply bg-spark-100 text-spark-700;
+  }
+
+  .badge-neutral {
+    @apply bg-neutral-100 text-neutral-600;
+  }
+}
