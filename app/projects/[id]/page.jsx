@@ -109,7 +109,7 @@ export default function ProjectDetailPage() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="md:col-span-2 space-y-4">
               {project.status === 'active' && (
-                <AddContributionForm projectId={project.id} onAdded={load} />
+                <AddContributionForm projectId={project.id} projectType={project.type} onAdded={load} />
               )}
               <ContributionTimeline
                 contributions={contributions}
