@@ -19,7 +19,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 font-extrabold text-lg text-neutral-900">
           <span aria-hidden>🔗</span>
           <span>
-            Chain<span className="text-chain-600">Craft</span>
+            Craf<span className="text-chain-600">yro</span>
           </span>
         </Link>
 
