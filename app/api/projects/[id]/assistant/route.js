@@ -55,7 +55,7 @@ export async function POST(request, { params }) {
 
   const instruction = prompts[action] || prompts.idea
 
-  const prompt = `Tu es l'assistant IA de ChainCraft, un outil de création collaborative en petits groupes.
+  const prompt = `Tu es l'assistant IA de Crafyro, un outil de création collaborative en petits groupes.
 Projet : "${project.title}" (type : ${project.type})
 Description : ${project.description}
 Objectif : ${project.objective}
