@@ -80,7 +80,7 @@ export default function ProfilePage() {
       <main className="flex-1 max-w-lg mx-auto px-4 py-10 w-full animate-fadeIn">
         <h1 className="text-2xl font-bold text-neutral-900">Profil</h1>
         <p className="text-sm text-neutral-500 mt-1">
-          Vos compétences aident ChainCraft à vous suggérer des projets pertinents. Pas de score public, pas de
+          Vos compétences aident Crafyro à vous suggérer des projets pertinents. Pas de score public, pas de
           fil de posts : juste ce qu'il faut pour bien matcher.
         </p>
 
