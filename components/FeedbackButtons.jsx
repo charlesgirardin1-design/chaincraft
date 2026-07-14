@@ -41,14 +41,18 @@ export default function FeedbackButtons({ contribution, currentUserId, onChanged
             key={f.value}
             onClick={() => handleClick(f.value)}
             disabled={pending === f.value}
-            className={`text-xs px-2.5 py-1 rounded-full border transition ${
+            className={`text-xs px-2.5 py-1 rounded-full border transition-all duration-200 active:scale-90 ${
               active
-                ? 'bg-chain-600 border-chain-600 text-white'
-                : 'border-neutral-200 text-neutral-500 hover:border-chain-300'
-            }`}
+                ? 'bg-gradient-to-br from-chain-500 to-chain-700 border-chain-600 text-white shadow-sm scale-105'
+                : 'border-neutral-200 text-neutral-500 hover:border-chain-300 hover:-translate-y-0.5'
+            } ${pending === f.value ? 'animate-pulseSoft' : ''}`}
           >
             {f.icon} {f.label}
-            {count > 0 && <span className="ml-1 opacity-70">{count}</span>}
+            {count > 0 && (
+              <span key={count} className="ml-1 opacity-70 inline-block animate-popIn">
+                {count}
+              </span>
+            )}
           </button>
         )
       })}

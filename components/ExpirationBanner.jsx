@@ -25,9 +25,12 @@ export default function ExpirationBanner({ project }) {
   if (!soon) return null
 
   return (
-    <div className="card p-4 bg-spark-50 border-spark-200 flex items-center justify-between flex-wrap gap-3">
-      <p className="text-sm text-spark-800">
-        ⏳ Ce projet expire dans <span className="font-semibold">{left} jour{left > 1 ? 's' : ''}</span> — pensez à
+    <div className="card p-4 bg-spark-50 border-spark-200 flex items-center justify-between flex-wrap gap-3 animate-fadeIn">
+      <p className="text-sm text-spark-800 flex items-center gap-2">
+        <span className="animate-pulseSoft" aria-hidden>
+          ⏳
+        </span>
+        Ce projet expire dans <span className="font-semibold">{left} jour{left > 1 ? 's' : ''}</span> — pensez à
         exporter votre travail avant la suppression automatique.
       </p>
       <ExportButton projectId={project.id} />
