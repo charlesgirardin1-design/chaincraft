@@ -34,12 +34,24 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-sm card p-7 animate-fadeIn">
+    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+      <div className="blob w-72 h-72 bg-chain-300 -top-16 -left-20 animate-blobFloat" />
+      <div className="blob w-64 h-64 bg-spark-200 bottom-0 right-0 animate-blobFloatSlow" />
+
+      <div className="relative w-full max-w-sm card p-7 animate-fadeIn">
         <div className="text-center mb-6">
-          <span className="text-4xl" aria-hidden>
-            🔗
-          </span>
+          <div className="flex justify-center">
+            <svg width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <defs>
+                <linearGradient id="loginLogoGrad" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stopColor="#7a6cf5" />
+                  <stop offset="1" stopColor="#3a27ad" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="7" width="13" height="12" rx="6" transform="rotate(-20 2 7)" stroke="url(#loginLogoGrad)" strokeWidth="2.4" />
+              <rect x="11" y="7" width="13" height="12" rx="6" transform="rotate(-20 11 7)" stroke="url(#loginLogoGrad)" strokeWidth="2.4" />
+            </svg>
+          </div>
           <h1 className="text-xl font-extrabold text-neutral-900 mt-3">
             Craf<span className="text-chain-600">yro</span>
           </h1>
@@ -47,7 +59,7 @@ export default function LoginPage() {
         </div>
 
         {sent ? (
-          <div className="text-center">
+          <div className="text-center animate-rise">
             <p className="text-sm text-neutral-600">
               Un lien de connexion a été envoyé à <span className="font-medium">{email}</span>. Ouvrez-le
               pour accéder à votre compte.
