@@ -79,7 +79,7 @@ export default function ProjectDetailPage() {
       <main className="flex-1 max-w-4xl mx-auto px-4 py-8 w-full animate-fadeIn">
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <span className="badge badge-chain">
+            <span className={`badge ${meta.badgeBg}`}>
               {meta.icon} {meta.label}
             </span>
             <h1 className="text-2xl font-bold text-neutral-900 mt-2">{project.title}</h1>
