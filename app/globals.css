@@ -101,4 +101,17 @@ body {
   .link-underline:hover::after {
     @apply w-full;
   }
+
+  /* Texte à dégradé animé (balayage de couleur en boucle) — utilisé sur les
+     accents de titre ("En chaîne.") et sur la marque, pour un effet vivant
+     sans dépendre d'une image. */
+  .text-gradient-animate {
+    @apply bg-gradient-to-r from-chain-600 via-spark-500 to-chain-600 bg-clip-text text-transparent animate-gradientShift;
+    background-size: 200% auto;
+  }
+
+  /* Curseur clignotant pour l'effet machine à écrire (TypewriterText). */
+  .typing-caret {
+    @apply inline-block w-[2px] h-[0.9em] align-middle bg-current ml-0.5 animate-blink;
+  }
 }

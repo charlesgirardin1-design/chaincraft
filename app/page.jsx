@@ -83,9 +83,23 @@ export default function HomePage() {
           <div className="relative max-w-4xl mx-auto px-4 pt-10 pb-8 w-full animate-fadeIn">
             <div className="text-center mb-8">
               <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
-                Créer ensemble. <span className="text-chain-600">En chaîne.</span> Sans ego.
+                <span className="inline-block animate-rise" style={{ animationDelay: '0ms' }}>
+                  Créer ensemble.
+                </span>{' '}
+                <span
+                  className="inline-block animate-rise text-gradient-animate"
+                  style={{ animationDelay: '120ms' }}
+                >
+                  En chaîne.
+                </span>{' '}
+                <span className="inline-block animate-rise" style={{ animationDelay: '240ms' }}>
+                  Sans ego.
+                </span>
               </h1>
-              <p className="text-sm text-neutral-500 mt-2 max-w-lg mx-auto">
+              <p
+                className="text-sm text-neutral-500 mt-2 max-w-lg mx-auto animate-rise"
+                style={{ animationDelay: '360ms' }}
+              >
                 Pas de fil infini, pas de likes publics : de petits groupes qui construisent une œuvre finie, à
                 plusieurs mains.
               </p>
