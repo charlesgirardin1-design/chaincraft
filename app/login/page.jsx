@@ -53,7 +53,7 @@ export default function LoginPage() {
             </svg>
           </div>
           <h1 className="text-xl font-extrabold text-neutral-900 mt-3">
-            Craf<span className="text-chain-600">yro</span>
+            Craf<span className="text-gradient-animate">yro</span>
           </h1>
           <p className="text-sm text-neutral-500 mt-1">Créer ensemble. En chaîne. Sans ego.</p>
         </div>
